@@ -5,7 +5,8 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -19,11 +20,12 @@
     );
 }
 
-/* LEFT SECTION */
+/* LEFT NAV */
 .left-nav {
     display: flex;
     align-items: center;
     gap: 30px;
+    position: relative;
 }
 
 /* LOGO */
@@ -38,20 +40,15 @@
 }
 
 .nav-link {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
     padding: 6px 14px;
     border-radius: 20px;
-    transition: background 0.3s ease;
 }
 
-.nav-link:hover {
-    background-color: #2a2f36;
-}
-
-/* ACTIVE TAB */
+.nav-link:hover,
 .nav-link.active {
     background-color: #2a2f36;
 }
@@ -59,51 +56,54 @@
 /* RIGHT ICONS */
 .navbar-icons {
     display: flex;
-    align-items: center;
     gap: 22px;
 }
 
 .icon {
     width: 22px;
-    height: 22px;
-    cursor: pointer;
     filter: invert(100%);
-    transition: opacity 0.3s ease;
+    cursor: pointer;
 }
 
-.icon:hover {
-    opacity: 0.7;
+/* ================= CSS ONLY HAMBURGER ================= */
+
+#menu-toggle {
+    display: none;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-    }
-
-    .icon:nth-child(2),
-    .icon:nth-child(3) {
-        display: none;
-    }
-
-    .logo {
-        width: 80px;
-    }
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 }
-/* ================= PRIME VIDEO HERO (ADJUSTED) ================= */
+
+.hamburger span {
+    width: 26px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* ================= HERO BANNER ================= */
 
 .hero-banner {
-    height: 68vh;                 /* thoda compact */
+    min-height: 68vh;
     background-image: url("https://tva.onscreenasia.com/wp-content/uploads/2025/11/Poster-2-The-Family-Man-S3-Trailer-Launch-Nov-7.jpg");
     background-size: cover;
-    background-position: center center;   /* IMPORTANT */
+    background-position: center 20%;
     position: relative;
 }
 
-/* Overlay ko slim + soft banaya */
+/* HERO OVERLAY */
 .hero-overlay {
     position: absolute;
     inset: 0;
+    max-width: 45%;
+    padding: 90px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: linear-gradient(
         to right,
         rgba(15, 23, 30, 0.95) 0%,
@@ -113,31 +113,22 @@
         rgba(15, 23, 30, 0.12) 60%,
         rgba(15, 23, 30, 0.05) 68%
     );
-    padding: 90px 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 45%;      /* 🔑 MAIN FIX */
 }
 
-/* Title */
 .hero-title {
     font-size: 44px;
-    font-weight: 700;
+    color: white;
     margin-bottom: 14px;
-    color: #ffffff;
 }
 
-/* Description */
 .hero-desc {
-    font-size: 15px;
-    line-height: 1.6;
-    max-width: 460px;
     color: #d1d5db;
+    max-width: 460px;
+    line-height: 1.6;
     margin-bottom: 24px;
 }
 
-/* Buttons */
+/* BUTTONS */
 .hero-buttons {
     display: flex;
     gap: 14px;
@@ -145,28 +136,66 @@
 
 .btn {
     padding: 12px 26px;
-    font-size: 15px;
     border-radius: 4px;
     border: none;
     cursor: pointer;
+    font-size: 15px;
 }
 
 .btn.primary {
-    background-color: #ffffff;
+    background: white;
     color: black;
     font-weight: 600;
 }
 
 .btn.secondary {
-    background-color: rgba(255, 255, 255, 0.22);
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255,255,255,0.22);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
 }
 
-/* MOBILE FIX */
+.btn.primary:hover {
+    background: black;
+    color: white;
+}
+
+.btn.secondary:hover {
+    background: black;
+}
+
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 768px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #0f171e;
+        padding: 15px 0;
+    }
+
+    .nav-menu a {
+        padding: 12px 20px;
+    }
+
+    #menu-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+
     .hero-banner {
-        height: 60vh;
+        min-height: 55vh;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-color: #0f171e;
     }
 
     .hero-overlay {
@@ -183,12 +212,4 @@
     .hero-title {
         font-size: 32px;
     }
-}
-
-:hover.btn.primary{
-    background-color: black;
-    color: #ffffff;
-}
-:hover.btn.secondary{
-    background-color: #000;
 }
