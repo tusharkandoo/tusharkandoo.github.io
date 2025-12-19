@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 35px;
+    background: linear-gradient(
+        to right,
+        #0f171e 0%,
+        #0f171e 40%,
+        #000000 100%
+    );
+}
+
+/* LEFT SECTION */
+.left-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* LOGO */
+.logo {
+    width: 95px;
+}
+
+/* MENU */
+.nav-menu {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #2a2f36;
+}
+
+/* ACTIVE TAB */
+.nav-link.active {
+    background-color: #2a2f36;
+}
+
+/* RIGHT ICONS */
+.navbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    filter: invert(100%);
+    transition: opacity 0.3s ease;
+}
+
+.icon:hover {
+    opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .icon:nth-child(2),
+    .icon:nth-child(3) {
+        display: none;
+    }
+
+    .logo {
+        width: 80px;
+    }
+}
+/* ================= PRIME VIDEO HERO (ADJUSTED) ================= */
+
+.hero-banner {
+    height: 68vh;                 /* thoda compact */
+    background-image: url("https://tva.onscreenasia.com/wp-content/uploads/2025/11/Poster-2-The-Family-Man-S3-Trailer-Launch-Nov-7.jpg");
+    background-size: cover;
+    background-position: center center;   /* IMPORTANT */
+    position: relative;
+}
+
+/* Overlay ko slim + soft banaya */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(15, 23, 30, 0.95) 0%,
+        rgba(15, 23, 30, 0.80) 22%,
+        rgba(15, 23, 30, 0.55) 38%,
+        rgba(15, 23, 30, 0.30) 50%,
+        rgba(15, 23, 30, 0.12) 60%,
+        rgba(15, 23, 30, 0.05) 68%
+    );
+    padding: 90px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 45%;      /* 🔑 MAIN FIX */
+}
+
+/* Title */
+.hero-title {
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: #ffffff;
+}
+
+/* Description */
+.hero-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 460px;
+    color: #d1d5db;
+    margin-bottom: 24px;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+}
+
+.btn {
+    padding: 12px 26px;
+    font-size: 15px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background-color: #ffffff;
+    color: black;
+    font-weight: 600;
+}
+
+.btn.secondary {
+    background-color: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 60vh;
+    }
+
+    .hero-overlay {
+        max-width: 100%;
+        padding: 60px 30px;
+        background: linear-gradient(
+            to top,
+            rgba(15, 23, 30, 0.95),
+            rgba(15, 23, 30, 0.55),
+            rgba(15, 23, 30, 0.15)
+        );
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+}
+
+:hover.btn.primary{
+    background-color: black;
+    color: #ffffff;
+}
+:hover.btn.secondary{
+    background-color: #000;
+}
