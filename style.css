@@ -1,215 +1,337 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 /* ================= NAVBAR ================= */
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 35px;
-    background: linear-gradient(
-        to right,
-        #0f171e 0%,
-        #0f171e 40%,
-        #000000 100%
-    );
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 28px;
+    background:linear-gradient(to right,#0f171e,#000);
 }
 
-/* LEFT NAV */
-.left-nav {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    position: relative;
+.left-nav{
+    display:flex;
+    align-items:center;
+    gap:26px;
 }
 
-/* LOGO */
-.logo {
-    width: 95px;
+.logo{
+    width:90px;
 }
 
-/* MENU */
-.nav-menu {
-    display: flex;
-    gap: 28px;
+.nav-menu{
+    display:flex;
+    gap:20px;
 }
 
-.nav-link {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    padding: 6px 14px;
-    border-radius: 20px;
+.nav-link{
+    color:white;
+    text-decoration:none;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:15px;
+}
+.nav-link.active{
+    background-color: #1f2937;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    background-color: #2a2f36;
-}
-
-/* RIGHT ICONS */
-.navbar-icons {
-    display: flex;
-    gap: 22px;
-}
-
-.icon {
-    width: 22px;
-    filter: invert(100%);
+:hover.nav-link,nav-link.active{
+    background: whitesmoke;
     cursor: pointer;
-}
-
-/* ================= CSS ONLY HAMBURGER ================= */
-
-#menu-toggle {
-    display: none;
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 26px;
-    height: 3px;
-    background-color: #fff;
-    border-radius: 2px;
-}
-
-/* ================= HERO BANNER ================= */
-
-.hero-banner {
-    min-height: 68vh;
-    background-image: url("https://tva.onscreenasia.com/wp-content/uploads/2025/11/Poster-2-The-Family-Man-S3-Trailer-Launch-Nov-7.jpg");
-    background-size: cover;
-    background-position: center 20%;
-    position: relative;
-}
-
-/* HERO OVERLAY */
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    max-width: 45%;
-    padding: 90px 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(
-        to right,
-        rgba(15, 23, 30, 0.95) 0%,
-        rgba(15, 23, 30, 0.80) 22%,
-        rgba(15, 23, 30, 0.55) 38%,
-        rgba(15, 23, 30, 0.30) 50%,
-        rgba(15, 23, 30, 0.12) 60%,
-        rgba(15, 23, 30, 0.05) 68%
-    );
-}
-
-.hero-title {
-    font-size: 44px;
-    color: white;
-    margin-bottom: 14px;
-}
-
-.hero-desc {
-    color: #d1d5db;
-    max-width: 460px;
-    line-height: 1.6;
-    margin-bottom: 24px;
-}
-
-/* BUTTONS */
-.hero-buttons {
-    display: flex;
-    gap: 14px;
-}
-
-.btn {
-    padding: 12px 26px;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-.btn.primary {
-    background: white;
     color: black;
-    font-weight: 600;
 }
 
-.btn.secondary {
-    background: rgba(255,255,255,0.22);
-    color: white;
-    border: 1px solid rgba(255,255,255,0.3);
+.navbar-icons{
+    display:flex;
+    gap:18px;
 }
 
-.btn.primary:hover {
-    background: black;
-    color: white;
+.icon{
+    width:22px;
+    filter:invert(100%);
 }
 
-.btn.secondary:hover {
-    background: black;
+/* ================= HERO SCROLL ================= */
+.hero-scroll{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
 }
 
-/* ================= RESPONSIVE ================= */
+.hero-scroll::-webkit-scrollbar{
+    display:none;
+}
 
-@media (max-width: 768px) {
+/* ================= HERO ================= */
+.hero{
+    min-width:100vw;
+    height:72vh;
 
-    .hamburger {
-        display: flex;
+    background-repeat:no-repeat;
+    background-size:contain;          /* 🔑 no crop */
+    background-position:center;
+    background-color:#0f171e;
+
+    display:flex;                     /* 🔑 no overlap */
+    align-items:flex-end;
+
+    scroll-snap-align:start;
+}
+
+/* HERO IMAGES (LOCAL / WORKING) */
+.hero-1{
+    background-image:url("https://tva.onscreenasia.com/wp-content/uploads/2025/11/Poster-2-The-Family-Man-S3-Trailer-Launch-Nov-7.jpg");
+}
+.hero-2{
+    background-image:url("paatal.jpg");
+}
+.hero-3{
+    background-image:url("https://wallpapercat.com/w/full/e/c/6/132554-1920x1080-desktop-full-hd-harry-potter-background-photo.jpg");
+}
+
+/* ================= HERO OVERLAY ================= */
+.hero-overlay{
+    width:100%;
+    max-width:45%;
+    padding:40px 60px;
+    color:white;
+
+    background:linear-gradient(
+        to right,
+        rgba(15,23,30,0.95),
+        rgba(15,23,30,0.65),
+        rgba(15,23,30,0.30),
+        transparent
+    );
+}
+
+.hero-overlay h1{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.hero-overlay p{
+    font-size:15px;
+    line-height:1.6;
+    margin-bottom:18px;
+}
+
+/* ================= BUTTONS ================= */
+.hero-buttons{
+    display:flex;
+    gap:14px;
+}
+
+.hero-buttons button{
+    padding:12px 26px;
+    font-size:15px;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+.primary{
+    background:white;
+    color:black;
+    font-weight:600;
+}
+
+.secondary{
+    background:rgba(255,255,255,0.25);
+    color:white;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px){
+
+    .nav-menu{
+        display:none;
     }
 
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        background-color: #0f171e;
-        padding: 15px 0;
+    .hero{
+        height:48vh;
     }
 
-    .nav-menu a {
-        padding: 12px 20px;
-    }
-
-    #menu-toggle:checked ~ .nav-menu {
-        display: flex;
-    }
-
-    .hero-banner {
-        min-height: 55vh;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center top;
-        background-color: #0f171e;
-    }
-
-    .hero-overlay {
-        max-width: 100%;
-        padding: 60px 30px;
-        background: linear-gradient(
+    .hero-overlay{
+        max-width:100%;
+        padding:14px 16px;
+        background:linear-gradient(
             to top,
-            rgba(15, 23, 30, 0.95),
-            rgba(15, 23, 30, 0.55),
-            rgba(15, 23, 30, 0.15)
+            rgba(15,23,30,0.95),
+            rgba(15,23,30,0.6),
+            transparent
         );
     }
 
-    .hero-title {
-        font-size: 32px;
+    .hero-overlay h1{
+        font-size:24px;
     }
+
+    .hero-overlay p{
+        font-size:13px;
+    }
+
+    .hero-buttons button{
+        padding:8px 14px;
+        font-size:13px;
+    }
+}
+/* ================= MOVIES SECTION ================= */
+
+.movies-section{
+    background:#0f171e;
+    padding:28px;
+    color:white;
+}
+
+.section-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.section-header h2{
+    font-size:20px;
+}
+
+.show-more{
+    background:#1f2937;
+    color:white;
+    border:none;
+    padding:8px 16px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.movie-row{
+    display:flex;
+    gap:16px;
+    overflow-x:auto;
+    padding-bottom:10px;
+}
+
+.movie-row::-webkit-scrollbar{
+    display:none;
+}
+
+.movie-card{
+    min-width:180px;
+    background:#111827;
+    border-radius:8px;
+    overflow:hidden;
+    flex-shrink:0;
+}
+
+.movie-card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+.movie-card span{
+    display:block;
+    padding:8px;
+    font-size:14px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .section-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    .movie-row{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+        overflow:visible;
+    }
+
+    .movie-card{
+        min-width:unset;
+    }
+
+    .movie-card img{
+        height:200px;
+    }
+}
+/* ================= FOOTER ================= */
+
+.footer{
+    background:#000;
+    padding:30px 20px;
+    text-align:center;
+    color:#9ca3af;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:14px;
+}
+
+.footer-links a{
+    color:#9ca3af;
+    text-decoration:none;
+    font-size:14px;
+    transition:color 0.3s ease;
+}
+
+.footer-links a:hover{
+    color:#ffffff;
+}
+
+.footer-text{
+    font-size:13px;
+}
+/* ================= MOVIE CARD HOVER ================= */
+
+.movie-card{
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover{
+    transform:scale(1.08);
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+    z-index:5;
+}
+
+.movie-card span{
+    transition:background 0.3s ease;
+}
+
+.movie-card:hover span{
+    background:#000;
+}
+/* ================= BUTTON HOVER ================= */
+
+.primary:hover{
+    background:#000;
+    color:#fff;
+}
+
+.secondary:hover{
+    background:#000;
+}
+@media(max-width:768px){
+    .footer-links{
+        gap:12px;
+    }
+}
+/* Trending section slight variation */
+.movies-section:nth-of-type(2) {
+    background:#0b1117;
 }

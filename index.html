@@ -1,64 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prime Video Clone</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prime Video Clone</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <!-- ================= NAVBAR ================= -->
 <nav class="navbar">
-
-    <!-- LEFT -->
     <div class="left-nav">
         <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png" class="logo">
-
-        <!-- CHECKBOX HACK -->
-        <input type="checkbox" id="menu-toggle">
-
-        <!-- HAMBURGER -->
-        <label for="menu-toggle" class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-
-        <!-- MENU -->
         <div class="nav-menu">
-            <a href="#" class="nav-link active">Home</a>
-            <a href="#" class="nav-link">Movies</a>
-            <a href="#" class="nav-link">TV Shows</a>
-            <a href="#" class="nav-link">Sports</a>
+            <a class="nav-link active">Home</a>
+            <a class="nav-link">Movies</a>
+            <a class="nav-link">TV Shows</a>
+            <a class="nav-link">Sports</a>
         </div>
     </div>
 
-    <!-- RIGHT ICONS -->
     <div class="navbar-icons">
         <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" class="icon">
         <img src="https://cdn-icons-png.flaticon.com/512/2311/2311524.png" class="icon">
-        <img src="https://cdn-icons-png.flaticon.com/512/566/566004.png" class="icon">
         <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="icon">
     </div>
-
 </nav>
 
-<!-- ================= HERO BANNER ================= -->
-<section class="hero-banner">
-    <div class="hero-overlay">
-        <h1 class="hero-title">The Family Man</h1>
-        <p class="hero-desc">
-            A middle-class man secretly works as an intelligence officer
-            for a special cell of the National Investigation Agency.
-        </p>
+<!-- ================= HERO SCROLL ================= -->
+<section class="hero-scroll">
 
-        <div class="hero-buttons">
-            <button class="btn primary">Watch Now</button>
-            <button class="btn secondary">More Info</button>
+    <!-- HERO 1 -->
+    <div class="hero hero-1">
+        <div class="hero-overlay">
+            <h1>The Family Man</h1>
+            <p>
+                A middle-class man secretly works as an intelligence officer
+                for a special cell of the National Investigation Agency.
+            </p>
+            <div class="hero-buttons">
+                <button class="primary">Watch Now</button>
+                <button class="secondary">More Info</button>
+            </div>
         </div>
     </div>
+
+    <!-- HERO 2 -->
+    <div class="hero hero-2">
+        <div class="hero-overlay">
+            <h1>Paatal Lok</h1>
+            <p>
+                A down-and-out cop lands the case of a lifetime when four suspects
+                are nabbed in an assassination attempt.
+            </p>
+            <div class="hero-buttons">
+                <button class="primary">Watch Now</button>
+                <button class="secondary">More Info</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO 3 -->
+    <div class="hero hero-3">
+        <div class="hero-overlay">
+            <h1>Harry Potter</h1>
+            <p>
+                An orphaned boy enrolls in a school of wizardry where he learns
+                the truth about himself and his destiny.
+            </p>
+            <div class="hero-buttons">
+                <button class="primary">Watch Now</button>
+                <button class="secondary">More Info</button>
+            </div>
+        </div>
+    </div>
+
 </section>
+
+<!-- ================= MOVIE CARDS SECTION ================= -->
+<section class="movies-section">
+
+    <div class="section-header">
+        <h2>Popular Movies</h2>
+        <button class="show-more">Show More</button>
+    </div>
+
+    <div class="movie-row">
+
+        <!-- Harry Potter Series -->
+        <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/7/7a/Harry_Potter_and_the_Philosopher%27s_Stone_banner.jpg">
+            <span>Harry Potter and the Sorcerer's Stone</span>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/c/c0/Harry_Potter_and_the_Chamber_of_Secrets_movie.jpg">
+            <span>Harry Potter and the Chamber of Secrets</span>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/1/18/Harry_Potter_and_the_Prisoner_of_Azkaban_film_poster.jpg">
+            <span>Harry Potter and the Prisoner of Azkaban</span>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/c/c9/Harry_Potter_and_the_Goblet_of_Fire_Poster.jpg">
+            <span>Harry Potter and the Goblet of Fire</span>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/e/e7/Harry_Potter_and_the_Order_of_the_Phoenix_poster.jpg">
+            <span>Harry Potter and the Order of the Phoenix</span>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Harry_Potter_and_the_Half-Blood_Prince_poster.jpg">
+            <span>Harry Potter and the Half-Blood Prince</span>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/2/2d/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_1.jpg">
+            <span>Harry Potter and the Deathly Hallows 1</span>
+        </div>
+
+    <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/d/df/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_2.jpg">
+            <span>Harry Potter and the Deathly Hallows 2</span>
+        </div>
+
+        <!-- Lord of the Rings -->
+        <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/f/fb/Lord_Rings_Fellowship_Ring.jpg">
+            <span>The Fellowship of the Ring</span>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a1/The_Two_Towers_cover.gif">
+            <span>The Two Towers</span>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/4/48/Lord_Rings_Return_King.jpg">
+            <span>The Return of the King</span>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b3/The_Hobbit-_An_Unexpected_Journey.jpeg">
+            <span>The Hobbit: An Unexpected Journey</span>
+        </div>
+
+    </div>
+</section>
+<!-- ================= TRENDING MOVIES SECTION ================= -->
+<section class="movies-section">
+
+    <div class="section-header">
+        <h2>Trending on Prime</h2>
+        <button class="show-more">Explore</button>
+    </div>
+
+    <div class="movie-row">
+
+        <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/id/5/51/Hera_Pheri_%28poster%29.jpg">
+            <span>Hera Pheri</span>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSgGm6sHhV0Q0McDY_aMxghWZVz_lv9M16Uw&s">
+            <span>Mirzapur</span>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/14/The_Boys_Season_2.jpg/250px-The_Boys_Season_2.jpg">
+            <span>The Boys</span>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/2/20/Dhol1.jpg">
+            <span>Dhol</span>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/d/d2/Farzi.jpeg">
+            <span>Farzi</span>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/e/e9/Citadel_Amazon_TV_Show_Promotional_Poster_v2.jpg">
+            <span>Citadel</span>
+        </div>
+        <!-- EXTRA TRENDING MOVIES FOR SLIDE -->
+
+<div class="movie-card">
+    <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Still-phir-hera-phir.jpg">
+    <span>Phir Hera Pheri</span>
+</div>
+
+<div class="movie-card">
+    <img src="https://upload.wikimedia.org/wikipedia/en/4/4c/The_Night_Manager_%28Indian_TV_series%29.jpg">
+    <span>The Night Manager</span>
+</div>
+
+<div class="movie-card">
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/5c/Inside_Edge.jpeg">
+    <span>Inside Edge</span>
+</div>
+
+<div class="movie-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYKkWEEfLd3EkQur0xLGM2RDwYb7VWvTjAUg&s">
+    <span>Made in Heaven</span>
+</div>
+
+<div class="movie-card">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/3_idiots_poster.jpg/250px-3_idiots_poster.jpg">
+    <span>3 Idiots</span>
+</div>
+
+<div class="movie-card">
+    <img src="https://upload.wikimedia.org/wikipedia/en/b/b4/Taare_Zameen_Par_Like_Stars_on_Earth_poster.png">
+    <span>Taare Zameen Par</span>
+</div>
+
+
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <div class="footer-links">
+        <a href="#">About Us</a>
+        <a href="#">Help</a>
+        <a href="#">Terms & Privacy</a>
+        <a href="#">Careers</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <p class="footer-text">
+        © 2025 Prime Video Clone. For Educational Use Only.
+    </p>
+
+</footer>
+
 
 </body>
 </html>
