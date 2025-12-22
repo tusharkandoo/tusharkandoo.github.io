@@ -5,7 +5,7 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
-/* ================= NAVBAR ================= */
+/* ye css part navbar ke liye hi sara kuch karunga */
 .navbar{
     display:flex;
     justify-content:space-between;
@@ -56,7 +56,7 @@
     filter:invert(100%);
 }
 
-/* ================= HERO SCROLL ================= */
+/* ye jo scroll menu add hai hero banner mai */
 .hero-scroll{
     display:flex;
     overflow-x:auto;
@@ -68,23 +68,23 @@
     display:none;
 }
 
-/* ================= HERO ================= */
+/* ye hero banner ke liye edited hai */
 .hero{
     min-width:100vw;
     height:72vh;
 
     background-repeat:no-repeat;
-    background-size:contain;          /* 🔑 no crop */
+    background-size:contain;          
     background-position:center;
     background-color:#0f171e;
 
-    display:flex;                     /* 🔑 no overlap */
+    display:flex;                     
     align-items:flex-end;
 
     scroll-snap-align:start;
 }
 
-/* HERO IMAGES (LOCAL / WORKING) */
+/* yaha par hero ke liye image added hai  */
 .hero-1{
     background-image:url("https://tva.onscreenasia.com/wp-content/uploads/2025/11/Poster-2-The-Family-Man-S3-Trailer-Launch-Nov-7.jpg");
 }
@@ -95,7 +95,7 @@
     background-image:url("https://wallpapercat.com/w/full/e/c/6/132554-1920x1080-desktop-full-hd-harry-potter-background-photo.jpg");
 }
 
-/* ================= HERO OVERLAY ================= */
+/* ye hero banner ke upar jo buttons or texts aa rahe hain vo sab hai yahan par */
 .hero-overlay{
     width:100%;
     max-width:45%;
@@ -122,7 +122,7 @@
     margin-bottom:18px;
 }
 
-/* ================= BUTTONS ================= */
+/* ye kaam button ke liye hai  */
 .hero-buttons{
     display:flex;
     gap:14px;
@@ -147,7 +147,7 @@
     color:white;
 }
 
-/* ================= MOBILE ================= */
+/* yahan se responsive hoga jo mobile view mai added dikhega  */
 @media(max-width:768px){
 
     .nav-menu{
@@ -182,7 +182,7 @@
         font-size:13px;
     }
 }
-/* ================= MOVIES SECTION ================= */
+/* ye sab movie vala part rahega  */
 
 .movies-section{
     background:#0f171e;
@@ -241,7 +241,7 @@
     font-size:14px;
 }
 
-/* ================= MOBILE ================= */
+/* fir bhule hue part yaad aa gaye unke liye naya mobile ka media use kar ke part likunga yahan par  */
 
 @media(max-width:768px){
 
@@ -266,7 +266,7 @@
         height:200px;
     }
 }
-/* ================= FOOTER ================= */
+/* ab ye sara jo niche about or baki sab hai unke liye css hoga yahan par  */
 
 .footer{
     background:#000;
@@ -297,7 +297,7 @@
 .footer-text{
     font-size:13px;
 }
-/* ================= MOVIE CARD HOVER ================= */
+ /* movie vale jo card banaya hun unka hover add karna bhul gaya tha vo edhar hoga  */
 
 .movie-card{
     transition:transform 0.3s ease, box-shadow 0.3s ease;
@@ -316,7 +316,7 @@
 .movie-card:hover span{
     background:#000;
 }
-/* ================= BUTTON HOVER ================= */
+/* ye button ka hover hai yahan par  */
 
 .primary:hover{
     background:#000;
@@ -331,7 +331,8 @@
         gap:12px;
     }
 }
-/* Trending section slight variation */
+/* trending mai thoding si change hai halka edit  */  
+
 .movies-section:nth-of-type(2) {
     background:#0b1117;
 }
