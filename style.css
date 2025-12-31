@@ -4,11 +4,18 @@
     box-sizing:border-box;
     font-family:Arial, Helvetica, sans-serif;
 }
+#menu-toggle {
+    display: none;
+}
+.hamburger {
+    display: none;
+}
+
 
 /* ye css part navbar ke liye hi sara kuch karunga */
 .navbar{
     display:flex;
-    justify-content:space-between;
+    
     align-items:center;
     padding:12px 28px;
     background:linear-gradient(to right,#0f171e,#000);
@@ -17,14 +24,17 @@
 .left-nav{
     display:flex;
     align-items:center;
-    gap:26px;
+    gap: 24px;
 }
-
+.hamburger-wrapper {
+  display: flex;
+  align-items: center;
+}
 .logo{
     width:90px;
 }
 
-.nav-menu{
+.nav-center{
     display:flex;
     gap:20px;
 }
@@ -40,15 +50,17 @@
     background-color: #1f2937;
 }
 
-:hover.nav-link,nav-link.active{
+.nav-link:hover,
+.nav-link.active{
     background: whitesmoke;
     cursor: pointer;
     color: black;
 }
 
 .navbar-icons{
-    display:flex;
+    display: flex;
     gap:18px;
+    margin-left: auto;
 }
 
 .icon{
@@ -153,7 +165,7 @@
 /* yahan se responsive hoga jo mobile view mai added dikhega  */
 @media(max-width:768px){
 
-    .nav-menu{
+    .nav-center{
         display:none;
     }
 
@@ -244,7 +256,7 @@
     font-size:14px;
 }
 
-/* fir bhule hue part yaad aa gaye unke liye naya mobile ka media use kar ke part likunga yahan par  */
+/* fir bhule hue part yaad aa gaye unke liye naya mobile ka media use kar ke part likha yahan par  */
 
 @media(max-width:768px){
 
@@ -271,35 +283,165 @@
 }
 /* ab ye sara jo niche about or baki sab hai unke liye css hoga yahan par  */
 
-.footer{
-    background:#000;
-    padding:30px 20px;
-    text-align:center;
-    color:#9ca3af;
+.amazon-footer {
+  background: #232f3e;
+  color: #ddd;
+  font-size: 14px;
 }
 
-.footer-links{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    margin-bottom:14px;
+/* back to top */
+.footer-top {
+  background: #37475a;
+  text-align: center;
+  padding: 12px;
+}
+.footer-top a {
+  color: white;
+  text-decoration: none;
 }
 
-.footer-links a{
-    color:#9ca3af;
-    text-decoration:none;
-    font-size:14px;
-    transition:color 0.3s ease;
+/* main 4 columns */
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 40px 60px;
+}
+.footer-main h4 {
+  color: white;
+  margin-bottom: 10px;
+}
+.footer-main a {
+  display: block;
+  margin: 6px 0;
+  font-size: 13px;
+  cursor: pointer;
+}
+.footer-main a:hover {
+  text-decoration: underline;
 }
 
-.footer-links a:hover{
-    color:#ffffff;
+/* language bar */
+.footer-lang {
+  border-top: 1px solid #3a4553;
+  padding: 25px;
+  text-align: center;
+}
+.footer-lang .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+.footer-lang button {
+  background: transparent;
+  border: 1px solid #848688;
+  color: white;
+  padding: 6px 10px;
+  margin: 5px;
+}
+:hover.footer-lang .logo, .footer-lang button:hover {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.footer-text{
-    font-size:13px;
+/* services grid */
+.footer-services {
+  background: #131a22;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 30px;
+  padding: 40px 80px;
+  font-size: 12px;
 }
+.footer-services div b {
+  display: block;
+  color: white;
+}
+.footer-services div span {
+  color: #aaa;
+}
+
+/* bottom */
+.footer-bottom {
+  background: #131a22;
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .footer-services {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-services {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+  }
+}
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid #848688;
+  color: white;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+/* dropdown hidden by default */
+.lang-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: white;
+  color: #111;
+  width: 220px;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+  z-index: 1000;
+}
+
+/* show on hover */
+.lang-dropdown:hover .lang-menu {
+  display: block;
+}
+
+.lang-menu label {
+  display: block;
+  padding: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.lang-menu label:hover {
+  background: #f3f3f3;
+}
+
+.lang-menu input {
+  margin-right: 8px;
+}
+
  /* movie vale jo card banaya hun unka hover add karna bhul gaya tha vo edhar hoga  */
 
 .movie-card{
@@ -339,3 +481,100 @@
 .movies-section:nth-of-type(2) {
     background:#0b1117;
 }
+/* ye navbar ke liye mobile view mai hamburger menu add karne ke liye  */
+@media(max-width:768px){
+    .nav-center{
+        transition: 
+  opacity 0.3s ease,
+  transform 0.3s ease;
+
+        display:none;
+    }
+    .hamburger-wrapper {
+    flex: 1;
+    justify-content: center;
+    position: relative;
+  }
+#menu-toggle {
+    display: none;
+}
+ .hamburger {
+    display: block;
+    font-size: 2rem;
+    color: #eee;
+    cursor: pointer;
+  }
+
+  .nav-center {
+    position: absolute;
+    top: 42px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    width: 220px;
+    background: #2b2b2b;
+    border-radius: 10px;
+    padding: 10px 0;
+
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 9999;
+  }
+
+  #menu-toggle:checked + .hamburger + .nav-center {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+  }
+}
+.nav-link {
+  transition: 
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.15s ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-1px);
+}
+.hamburger {
+  transition: transform 0.3s ease;
+}
+
+#menu-toggle:checked + .hamburger {
+  transform: rotate(90deg);
+}
+.hero-buttons button {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hero-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+}
+.movie-card img {
+  transition: filter 0.25s ease;
+}
+
+.movie-card:hover img {
+  filter: brightness(1.08);
+}
+.hero-scroll {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  scroll-snap-align: center;
+}
+.navbar-icons :hover {
+    cursor: pointer;
+  transform: scale(1.1);
+    
+
+}
+
