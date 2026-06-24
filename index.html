@@ -4,12 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prime Video Clone</title>
-<link rel="stylesheet"href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- Is code mai sara kaam Navbar ka hua hai  -->
 <nav class="navbar">
 
   <!-- LEFT -->
@@ -34,15 +33,24 @@
 
   <!-- RIGHT -->
   <div class="navbar-icons">
-    <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" class="icon">
-    <img src="https://cdn-icons-png.flaticon.com/512/2311/2311524.png" class="icon">
-    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="icon">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search Movies...">
+    </div>
+    <div class="wishlist-nav-wrapper" id="wishlistNavWrapper">
+      <a class="nav-link" id="wishlistLink">My Wishlist (<span id="wishlistCount">0</span>)</a>
+      <div class="wishlist-dropdown" id="wishlistDropdown">
+        <div class="wishlist-dropdown-header">
+          <span>My Wishlist</span>
+          <button id="clearWishlist" class="clear-wishlist-btn">Clear All</button>
+        </div>
+        <div id="wishlistMovies" class="wishlist-dropdown-body"></div>
+      </div>
+    </div>
   </div>
 
 </nav>
 
 
-<!-- Yahan Par hero scroll ka add kiya gaya hai -->
 <section class="hero-scroll">
 
     <!-- 1 hero -->
@@ -54,7 +62,7 @@
                 for a special cell of the National Investigation Agency.
             </p>
             <div class="hero-buttons">
-               <a href="https://www.primevideo.com/detail/The-Family-Man/0RV81WUUHUNK1H2SSUO4FFF6T5"> <button class="primary">Watch Now</button></a>
+               <a href="https://www.primevideo.com/detail/The-Family-Man/0RV81WUUHUNK1H2SSUO4FFF6T5"><button class="primary">Watch Now</button></a>
                <a href="https://www.imdb.com/title/tt9544034/"><button class="secondary">More Info</button></a>
             </div>
         </div>
@@ -89,23 +97,124 @@
             </div>
         </div>
     </div>
-   <div class="hero hero-4">
-    <div class="hero-overlay">
-        <h1>Stranger Things</h1>
-        <p></p>
-            A group of kids in a small town discover supernatural events
-            and government conspiracies.
-        </p>
-        <div class="hero-buttons">
-           <a href="https://www.netflix.com/in/title/80057281?source=imdb&fromWatch=true"><button class="primary">Watch Now</button></a>
-            <a href="https://www.imdb.com/title/tt4574334/"><button class="secondary">More Info</button></a>
+
+    <!-- 4 hero — fixed unclosed <p> tag -->
+    <div class="hero hero-4">
+        <div class="hero-overlay">
+            <h1>Stranger Things</h1>
+            <p>
+                A group of kids in a small town discover supernatural events
+                and government conspiracies.
+            </p>
+            <div class="hero-buttons">
+               <a href="https://www.netflix.com/in/title/80057281?source=imdb&fromWatch=true"><button class="primary">Watch Now</button></a>
+                <a href="https://www.imdb.com/title/tt4574334/"><button class="secondary">More Info</button></a>
+            </div>
         </div>
     </div>
-   </div>
 
 </section>
 
-<!--  Yahan se movies jo cards vale hain student card jaise unko add kiya hai  -->
+<!-- Trending Now Section -->
+<section class="movies-section">
+  <div class="section-header">
+    <h2>🔥 Trending Now</h2>
+    <button class="show-more">Show More</button>
+  </div>
+  <div class="movie-row">
+    <div class="movie-card">
+      <button class="wishlist-btn">🤍</button>
+      <a href="https://www.primevideo.com/detail/The-Family-Man/0RV81WUUHUNK1H2SSUO4FFF6T5"><img src="https://tva.onscreenasia.com/wp-content/uploads/2025/11/Poster-2-The-Family-Man-S3-Trailer-Launch-Nov-7.jpg"></a>
+      <span>The Family Man</span>
+    </div>
+    <div class="movie-card">
+      <button class="wishlist-btn">🤍</button>
+      <a href="https://www.primevideo.com/detail/Mirzapur/0PDOKMV9CRLOMO5EUKNCUJLG4Q"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSgGm6sHhV0Q0McDY_aMxghWZVz_lv9M16Uw&s"></a>
+      <span>Mirzapur</span>
+    </div>
+    <div class="movie-card">
+      <button class="wishlist-btn">🤍</button>
+      <a href="https://www.primevideo.com/detail/The-Boys/0FVU5GW8977QYZ5QYQ3ONWAMZ6"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/14/The_Boys_Season_2.jpg/250px-The_Boys_Season_2.jpg"></a>
+      <span>The Boys</span>
+    </div>
+    <div class="movie-card">
+      <button class="wishlist-btn">🤍</button>
+      <a href="https://www.primevideo.com/detail/Farzi/0HDHQAUF5LPWOJRCO025LFJSJI"><img src="https://upload.wikimedia.org/wikipedia/en/d/d2/Farzi.jpeg"></a>
+      <span>Farzi</span>
+    </div>
+    <div class="movie-card">
+      <button class="wishlist-btn">🤍</button>
+      <a href="https://www.primevideo.com/detail/Citadel/0U5UNXQ1U9T6S6J2XCIV6UAMWF"><img src="https://upload.wikimedia.org/wikipedia/en/e/e9/Citadel_Amazon_TV_Show_Promotional_Poster_v2.jpg"></a>
+      <span>Citadel</span>
+    </div>
+    <div class="movie-card">
+      <button class="wishlist-btn">🤍</button>
+      <a href="https://www.primevideo.com/detail/Inside-Edge/0PDN3DS1B1DWPHDVZ6MTAW1XE9"><img src="https://upload.wikimedia.org/wikipedia/en/5/5c/Inside_Edge.jpeg"></a>
+      <span>Inside Edge</span>
+    </div>
+    <div class="movie-card">
+      <button class="wishlist-btn">🤍</button>
+      <a href="https://www.primevideo.com/detail/The-Night-Manager/0IV5WXSP5Q7XTPBSY98OT47XVF"><img src="https://upload.wikimedia.org/wikipedia/en/4/4c/The_Night_Manager_%28Indian_TV_series%29.jpg"></a>
+      <span>The Night Manager</span>
+    </div>
+    <div class="movie-card">
+      <button class="wishlist-btn">🤍</button>
+      <a href="https://www.primevideo.com/detail/Made-In-Heaven/0JP36WERGLAJLNET3SZS9XTXJ1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYKkWEEfLd3EkQur0xLGM2RDwYb7VWvTjAUg&s"></a>
+      <span>Made in Heaven</span>
+    </div>
+  </div>
+</section>
+
+<!-- Prime Originals Section -->
+<section class="movies-section">
+  <div class="section-header">
+    <h2>⭐ Prime Originals</h2>
+    <button class="show-more">Show More</button>
+  </div>
+  <div class="movie-row">
+    <div class="movie-card">
+      <button class="wishlist-btn">🤍</button>
+      <a href="https://www.primevideo.com/detail/Paatal-Lok/0G9IEOHCN8KMY6COD9ILGH7IY5"><img src="https://www.nakulanand.in/wp-content/uploads/2021/03/Patallokposter1.jpg"></a>
+      <span>Paatal Lok</span>
+    </div>
+    <div class="movie-card">
+      <button class="wishlist-btn">🤍</button>
+      <a href="https://www.primevideo.com/detail/The-Family-Man/0RV81WUUHUNK1H2SSUO4FFF6T5"><img src="https://image.tmdb.org/t/p/original/rV1UTbYb5I8UAAcuTgOnEnOJhXf.jpg"></a>
+      <span>The Family Man S2</span>
+    </div>
+    <div class="movie-card">
+      <button class="wishlist-btn">🤍</button>
+      <a href="https://www.primevideo.com/detail/Mirzapur/0PDOKMV9CRLOMO5EUKNCUJLG4Q"><img src="https://www.deccanchronicle.com/h-upload/2024/06/10/1096177-mirzapurseason3.webp"></a>
+      <span>Mirzapur S3</span>
+    </div>
+    <div class="movie-card">
+      <button class="wishlist-btn">🤍</button>
+      <a href="https://www.primevideo.com/detail/Farzi/0HDHQAUF5LPWOJRCO025LFJSJI"><img src="https://upload.wikimedia.org/wikipedia/en/d/d2/Farzi.jpeg"></a>
+      <span>Farzi — Prime Original</span>
+    </div>
+    <div class="movie-card">
+      <button class="wishlist-btn">🤍</button>
+      <a href="https://www.primevideo.com/detail/Citadel/0U5UNXQ1U9T6S6J2XCIV6UAMWF"><img src="https://upload.wikimedia.org/wikipedia/en/e/e9/Citadel_Amazon_TV_Show_Promotional_Poster_v2.jpg"></a>
+      <span>Citadel — Prime Original</span>
+    </div>
+    <div class="movie-card">
+      <button class="wishlist-btn">🤍</button>
+      <a href="https://www.primevideo.com/detail/The-Boys/0FVU5GW8977QYZ5QYQ3ONWAMZ6"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/14/The_Boys_Season_2.jpg/250px-The_Boys_Season_2.jpg"></a>
+      <span>The Boys — Prime Original</span>
+    </div>
+    <div class="movie-card">
+      <button class="wishlist-btn">🤍</button>
+      <a href="https://www.primevideo.com/detail/Made-In-Heaven/0JP36WERGLAJLNET3SZS9XTXJ1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYKkWEEfLd3EkQur0xLGM2RDwYb7VWvTjAUg&s"></a>
+      <span>Made in Heaven S2</span>
+    </div>
+    <div class="movie-card">
+      <button class="wishlist-btn">🤍</button>
+      <a href="https://www.primevideo.com/detail/Inside-Edge/0PDN3DS1B1DWPHDVZ6MTAW1XE9"><img src="https://upload.wikimedia.org/wikipedia/en/5/5c/Inside_Edge.jpeg"></a>
+      <span>Inside Edge S3</span>
+    </div>
+  </div>
+</section>
+
 <section class="movies-section">
 
     <div class="section-header">
@@ -115,152 +224,147 @@
 
     <div class="movie-row">
 
-        <!-- Harry Potter Series meri favourite movie ko toh add karna hi hai -->
         <div class="movie-card">
-          <a href="https://www.primevideo.com/detail/Harry-Potter-and-the-Sorcerers-Stone/0JXM9K5QSXG0X1O6M4CHGIYACB"> <img src="https://upload.wikimedia.org/wikipedia/en/7/7a/Harry_Potter_and_the_Philosopher%27s_Stone_banner.jpg"></a>
+          <button class="wishlist-btn">🤍</button>
+          <a href="https://www.primevideo.com/detail/Harry-Potter-and-the-Sorcerers-Stone/0JXM9K5QSXG0X1O6M4CHGIYACB"><img src="https://upload.wikimedia.org/wikipedia/en/7/7a/Harry_Potter_and_the_Philosopher%27s_Stone_banner.jpg"></a>
             <span>Harry Potter and the Sorcerer's Stone</span>
         </div>
 
         <div class="movie-card">
-           <a href="https://www.primevideo.com/detail/Harry-Potter-and-the-Chamber-of-Secrets/0SLPZNFKIYWDIUSNY78Y1RK4TW"> <img src="https://upload.wikimedia.org/wikipedia/en/c/c0/Harry_Potter_and_the_Chamber_of_Secrets_movie.jpg"></a>
+          <button class="wishlist-btn">🤍</button>
+           <a href="https://www.primevideo.com/detail/Harry-Potter-and-the-Chamber-of-Secrets/0SLPZNFKIYWDIUSNY78Y1RK4TW"><img src="https://upload.wikimedia.org/wikipedia/en/c/c0/Harry_Potter_and_the_Chamber_of_Secrets_movie.jpg"></a>
             <span>Harry Potter and the Chamber of Secrets</span>
         </div>
 
         <div class="movie-card">
-           <a href="https://www.primevideo.com/detail/Harry-Potter-and-the-Prisoner-of-Azkaban/0O76EJ1MXDUQDTJV8IF40WA49C"> <img src="https://upload.wikimedia.org/wikipedia/en/1/18/Harry_Potter_and_the_Prisoner_of_Azkaban_film_poster.jpg"></a>
+          <button class="wishlist-btn">🤍</button>
+           <a href="https://www.primevideo.com/detail/Harry-Potter-and-the-Prisoner-of-Azkaban/0O76EJ1MXDUQDTJV8IF40WA49C"><img src="https://upload.wikimedia.org/wikipedia/en/1/18/Harry_Potter_and_the_Prisoner_of_Azkaban_film_poster.jpg"></a>
             <span>Harry Potter and the Prisoner of Azkaban</span>
         </div>
 
         <div class="movie-card">
-          <a href="https://www.primevideo.com/detail/Harry-Potter-and-the-Goblet-of-Fire/0U8DDDTTE7YEBHTSN7OYXN0BWR"> <img src="https://upload.wikimedia.org/wikipedia/en/c/c9/Harry_Potter_and_the_Goblet_of_Fire_Poster.jpg"></a>
+          <button class="wishlist-btn">🤍</button>
+          <a href="https://www.primevideo.com/detail/Harry-Potter-and-the-Goblet-of-Fire/0U8DDDTTE7YEBHTSN7OYXN0BWR"><img src="https://upload.wikimedia.org/wikipedia/en/c/c9/Harry_Potter_and_the_Goblet_of_Fire_Poster.jpg"></a>
             <span>Harry Potter and the Goblet of Fire</span>
         </div>
 
         <div class="movie-card">
-           <a href="https://www.primevideo.com/detail/Harry-Potter-and-the-Order-of-the-Phoenix/0OO13GGXMSLTD0BYRMBMBMXI47"> <img src="https://upload.wikimedia.org/wikipedia/en/e/e7/Harry_Potter_and_the_Order_of_the_Phoenix_poster.jpg"></a>
+          <button class="wishlist-btn">🤍</button>
+           <a href="https://www.primevideo.com/detail/Harry-Potter-and-the-Order-of-the-Phoenix/0OO13GGXMSLTD0BYRMBMBMXI47"><img src="https://upload.wikimedia.org/wikipedia/en/e/e7/Harry_Potter_and_the_Order_of_the_Phoenix_poster.jpg"></a>
             <span>Harry Potter and the Order of the Phoenix</span>
         </div>
 
         <div class="movie-card">
-          <a href="https://www.primevideo.com/detail/Harry-Potter-and-the-Half-Blood-Prince/0SS5KJYCLUB3VU1DW8MF5UCMQZ"> <img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Harry_Potter_and_the_Half-Blood_Prince_poster.jpg"></a>
+          <button class="wishlist-btn">🤍</button>
+          <a href="https://www.primevideo.com/detail/Harry-Potter-and-the-Half-Blood-Prince/0SS5KJYCLUB3VU1DW8MF5UCMQZ"><img src="https://upload.wikimedia.org/wikipedia/en/3/3f/Harry_Potter_and_the_Half-Blood_Prince_poster.jpg"></a>
             <span>Harry Potter and the Half-Blood Prince</span>
         </div>
 
         <div class="movie-card">
-           <a href="https://www.primevideo.com/detail/Harry-Potter-And-The-Deathly-Hallows---Part-1/0N4SXOJTJ2MHYF5FP83P84G7RL"> <img src="https://upload.wikimedia.org/wikipedia/en/2/2d/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_1.jpg"></a>
+          <button class="wishlist-btn">🤍</button>
+           <a href="https://www.primevideo.com/detail/Harry-Potter-And-The-Deathly-Hallows---Part-1/0N4SXOJTJ2MHYF5FP83P84G7RL"><img src="https://upload.wikimedia.org/wikipedia/en/2/2d/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_1.jpg"></a>
             <span>Harry Potter and the Deathly Hallows 1</span>
         </div>
 
-    <div class="movie-card">
-          <a href="https://www.primevideo.com/detail/Harry-Potter-and-the-Deathly-Hallows---Part-2/0K34FKPLFE01DV0I8HITAS2MD7"> <img src="https://upload.wikimedia.org/wikipedia/en/d/df/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_2.jpg"></a>
+        <div class="movie-card">
+          <button class="wishlist-btn">🤍</button>
+          <a href="https://www.primevideo.com/detail/Harry-Potter-and-the-Deathly-Hallows---Part-2/0K34FKPLFE01DV0I8HITAS2MD7"><img src="https://upload.wikimedia.org/wikipedia/en/d/df/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_2.jpg"></a>
             <span>Harry Potter and the Deathly Hallows 2</span>
         </div>
 
-        <!-- Lord of the Rings ye soch raha hun dekhne ko or kuch samj nhi aaya isiliye isko add kar diye -->
         <div class="movie-card">
-           <a href="https://www.primevideo.com/detail/The-Lord-of-the-Rings-The-Fellowship-of-the-Ring/0N0CRBLY1S5GDA4EVTQ34LF5GN"> <img src="https://upload.wikimedia.org/wikipedia/en/f/fb/Lord_Rings_Fellowship_Ring.jpg"></a>
+          <button class="wishlist-btn">🤍</button>
+           <a href="https://www.primevideo.com/detail/The-Lord-of-the-Rings-The-Fellowship-of-the-Ring/0N0CRBLY1S5GDA4EVTQ34LF5GN"><img src="https://upload.wikimedia.org/wikipedia/en/f/fb/Lord_Rings_Fellowship_Ring.jpg"></a>
             <span>The Fellowship of the Ring</span>
         </div>
 
         <div class="movie-card">
+          <button class="wishlist-btn">🤍</button>
            <a href="https://www.primevideo.com/detail/The-Lord-of-the-Rings-The-Two-Towers/0OSAJRJAW5BHY843QHALJZFUTX"><img src="https://upload.wikimedia.org/wikipedia/en/a/a1/The_Two_Towers_cover.gif"></a>
             <span>The Two Towers</span>
         </div>
 
         <div class="movie-card">
-          <a href="https://www.primevideo.com/detail/The-Lord-of-the-Rings-The-Return-of-the-King/0NSGBFYAQDZQKEC8BBWKT8GILJ"> <img src="https://upload.wikimedia.org/wikipedia/en/4/48/Lord_Rings_Return_King.jpg"></a>
+          <button class="wishlist-btn">🤍</button>
+          <a href="https://www.primevideo.com/detail/The-Lord-of-the-Rings-The-Return-of-the-King/0NSGBFYAQDZQKEC8BBWKT8GILJ"><img src="https://upload.wikimedia.org/wikipedia/en/4/48/Lord_Rings_Return_King.jpg"></a>
             <span>The Return of the King</span>
         </div>
 
         <div class="movie-card">
-           <a href="https://www.primevideo.com/detail/The-Hobbit-An-Unexpected-Journey/0RZDRRR46MYHPSQE8MNH0HQKZ8"> <img src="https://upload.wikimedia.org/wikipedia/en/b/b3/The_Hobbit-_An_Unexpected_Journey.jpeg"></a>
-            <span>The Hobbit: An Unexpected Journey</span>
-        </div>
-
-    </div>
-</section>
-<!--  Yahan par trending movie vala add hai code  -->
-<section class="movies-section">
-
-    <div class="section-header">
-        <h2>Trending on Prime</h2>
-        <button class="show-more">Explore</button>
-    </div>
-
-    <div class="movie-row">
-
-        <div class="movie-card">
-           <a href="https://www.primevideo.com/detail/Hera-Pheri/0R9WA5MD3Q09FD5MCB8L3LDII9"><img src="https://upload.wikimedia.org/wikipedia/id/5/51/Hera_Pheri_%28poster%29.jpg"></a>
-            <span>Hera Pheri</span>
-        </div>
-
-        <div class="movie-card">
+          <button class="wishlist-btn">🤍</button>
             <a href="https://www.primevideo.com/detail/Mirzapur/0PDOKMV9CRLOMO5EUKNCUJLG4Q"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSgGm6sHhV0Q0McDY_aMxghWZVz_lv9M16Uw&s"></a>
             <span>Mirzapur</span>
         </div>
 
         <div class="movie-card">
+          <button class="wishlist-btn">🤍</button>
            <a href="https://www.primevideo.com/detail/The-Boys/0FVU5GW8977QYZ5QYQ3ONWAMZ6"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/14/The_Boys_Season_2.jpg/250px-The_Boys_Season_2.jpg"></a>
             <span>The Boys</span>
         </div>
 
         <div class="movie-card">
+          <button class="wishlist-btn">🤍</button>
             <a href="https://www.primevideo.com/detail/Dhol/0OPUS2NY4BOVGNO1T396BEPU01"><img src="https://upload.wikimedia.org/wikipedia/en/2/20/Dhol1.jpg"></a>
             <span>Dhol</span>
         </div>
 
         <div class="movie-card">
+          <button class="wishlist-btn">🤍</button>
             <a href="https://www.primevideo.com/detail/Farzi/0HDHQAUF5LPWOJRCO025LFJSJI"><img src="https://upload.wikimedia.org/wikipedia/en/d/d2/Farzi.jpeg"></a>
             <span>Farzi</span>
         </div>
 
         <div class="movie-card">
+          <button class="wishlist-btn">🤍</button>
           <a href="https://www.primevideo.com/detail/Citadel/0U5UNXQ1U9T6S6J2XCIV6UAMWF"><img src="https://upload.wikimedia.org/wikipedia/en/e/e9/Citadel_Amazon_TV_Show_Promotional_Poster_v2.jpg"></a>
             <span>Citadel</span>
         </div>
+
         <div class="movie-card">
+          <button class="wishlist-btn">🤍</button>
            <a href="https://www.primevideo.com/detail/Phir-Hera-Pheri/0OAUVK5WZLAMJWN26H0UGZB8LK"><img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Still-phir-hera-phir.jpg"></a>
             <span>Phir Hera Pheri</span>
         </div>
 
-<div class="movie-card">
-   <a href="https://www.primevideo.com/detail/The-Night-Manager/0IV5WXSP5Q7XTPBSY98OT47XVF"> <img src="https://upload.wikimedia.org/wikipedia/en/4/4c/The_Night_Manager_%28Indian_TV_series%29.jpg"></a>
-    <span>The Night Manager</span>
-</div>
+        <div class="movie-card">
+           <button class="wishlist-btn">🤍</button>
+           <a href="https://www.primevideo.com/detail/The-Night-Manager/0IV5WXSP5Q7XTPBSY98OT47XVF"><img src="https://upload.wikimedia.org/wikipedia/en/4/4c/The_Night_Manager_%28Indian_TV_series%29.jpg"></a>
+            <span>The Night Manager</span>
+        </div>
 
-<div class="movie-card">
-   <a href="https://www.primevideo.com/detail/Inside-Edge/0PDN3DS1B1DWPHDVZ6MTAW1XE9"><img src="https://upload.wikimedia.org/wikipedia/en/5/5c/Inside_Edge.jpeg"></a>
-    <span>Inside Edge</span>
-</div>
+        <div class="movie-card">
+           <button class="wishlist-btn">🤍</button>
+           <a href="https://www.primevideo.com/detail/Inside-Edge/0PDN3DS1B1DWPHDVZ6MTAW1XE9"><img src="https://upload.wikimedia.org/wikipedia/en/5/5c/Inside_Edge.jpeg"></a>
+            <span>Inside Edge</span>
+        </div>
 
-<div class="movie-card">
-   <a href="https://www.primevideo.com/detail/Made-In-Heaven/0JP36WERGLAJLNET3SZS9XTXJ1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYKkWEEfLd3EkQur0xLGM2RDwYb7VWvTjAUg&s"></a>
-    <span>Made in Heaven</span>
-</div>
+        <div class="movie-card">
+           <button class="wishlist-btn">🤍</button>
+           <a href="https://www.primevideo.com/detail/Made-In-Heaven/0JP36WERGLAJLNET3SZS9XTXJ1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYKkWEEfLd3EkQur0xLGM2RDwYb7VWvTjAUg&s"></a>
+            <span>Made in Heaven</span>
+        </div>
 
-<div class="movie-card">
-    <a href="https://www.primevideo.com/detail/3-Idiots/0IMQLIS5J8EC6OLJBZAIAWY0XF"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/3_idiots_poster.jpg/250px-3_idiots_poster.jpg"></a>
-    <span>3 Idiots</span>
-</div>
+        <div class="movie-card">
+           <button class="wishlist-btn">🤍</button>
+            <a href="https://www.primevideo.com/detail/3-Idiots/0IMQLIS5J8EC6OLJBZAIAWY0XF"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/3_idiots_poster.jpg/250px-3_idiots_poster.jpg"></a>
+            <span>3 Idiots</span>
+        </div>
 
-<div class="movie-card">
-   <a href="https://www.amazon.com/Taare-Zameen-Par-Movies-TV/s?k=Taare+Zameen+Par&rh=n%3A2625373011"><img src="https://upload.wikimedia.org/wikipedia/en/b/b4/Taare_Zameen_Par_Like_Stars_on_Earth_poster.png"></a>
-    <span>Taare Zameen Par</span>
-</div>
-
+        <div class="movie-card">
+           <button class="wishlist-btn">🤍</button>
+           <a href="https://www.amazon.com/Taare-Zameen-Par-Movies-TV/s?k=Taare+Zameen+Par&rh=n%3A2625373011"><img src="https://upload.wikimedia.org/wikipedia/en/b/b4/Taare_Zameen_Par_Like_Stars_on_Earth_poster.png"></a>
+            <span>Taare Zameen Par</span>
+        </div>
 
     </div>
 </section>
 
-<!-- Yahan par footer hai jaise contact me or baki sab isme abhi or add karunga jada abhi samjh aa nhi raha ki kya add karu -->
 <footer class="amazon-footer">
 
-  <!-- Back to top -->
   <div class="footer-top">
     <a href="#">Back to top</a>
   </div>
 
-  <!-- Upper links -->
   <div class="footer-main">
     <div>
       <h4>Get to Know Us</h4>
@@ -271,7 +375,6 @@
       <a>Amazon Devices</a>
       <a>Amazon Science</a>
     </div>
-
     <div>
       <h4>Make Money with Us</h4>
       <a>Sell on Amazon</a>
@@ -281,7 +384,6 @@
       <a>Self-Publish</a>
       <a>Host an Amazon Hub</a>
     </div>
-
     <div>
       <h4>Amazon Payment Products</h4>
       <a>Amazon Business Card</a>
@@ -289,7 +391,6 @@
       <a>Reload Your Balance</a>
       <a>Currency Converter</a>
     </div>
-
     <div>
       <h4>Let Us Help You</h4>
       <a>Your Account</a>
@@ -300,25 +401,22 @@
     </div>
   </div>
 
-  <!-- Logo + language -->
   <div class="footer-lang">
     <a href="https://www.amazon.com/?ref_=footer_logo"><span class="logo">amazon</span></a>
     <div class="lang-dropdown">
-    <button class="lang-btn">🌐 English</button>
-
-    <div class="lang-menu">
-      <label><input type="radio" name="lang" checked> English - EN</label>
-      <label><input type="radio" name="lang"> Español - ES</label>
-      <label><input type="radio" name="lang"> العربية - AR</label>
-      <label><input type="radio" name="lang"> Deutsch - DE</label>
-      <label><input type="radio" name="lang"> हिन्दी - HI</label>
+      <button class="lang-btn">🌐 English</button>
+      <div class="lang-menu">
+        <label><input type="radio" name="lang" checked> English - EN</label>
+        <label><input type="radio" name="lang"> Español - ES</label>
+        <label><input type="radio" name="lang"> العربية - AR</label>
+        <label><input type="radio" name="lang"> Deutsch - DE</label>
+        <label><input type="radio" name="lang"> हिन्दी - HI</label>
+      </div>
     </div>
-  </div>
-    <button>&#8377 RS - Indian Rupee </button>
+    <button>&#8377 RS - Indian Rupee</button>
     <button>India</button>
   </div>
 
-  <!-- Services grid -->
   <div class="footer-services">
     <div><b>Amazon Music</b><span>Stream millions of songs</span></div>
     <div><b>Amazon Ads</b><span>Reach customers</span></div>
@@ -327,7 +425,6 @@
     <div><b>ACX</b><span>Audiobook Publishing</span></div>
     <div><b>Sell on Amazon</b><span>Start Selling</span></div>
     <div><b>Veego</b><span>Inventory Management</span></div>
-
     <div><b>Amazon Business</b><span>Everything for Business</span></div>
     <div><b>AmazonGlobal</b><span>Ship Internationally</span></div>
     <div><b>AWS</b><span>Cloud Computing</span></div>
@@ -337,13 +434,13 @@
     <div><b>Ring</b><span>Smart Home Security</span></div>
   </div>
 
-  <!-- Legal -->
   <div class="footer-bottom">
     <p>Conditions of Use · Privacy Notice · Consumer Health Data Privacy Disclosure</p>
-    <p> &copy 2025-2026 Prime Video Clone Project </p>
+    <p>&copy; 2025-2026 Prime Video Clone Project</p>
   </div>
 
 </footer>
+
 <div style="text-align:center; font-size:14px; opacity:0.7; margin:20px;">
   <p>
     This is a static academic project created for learning HTML and CSS.
@@ -351,6 +448,7 @@
     and does not collect any personal information.
   </p>
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>
